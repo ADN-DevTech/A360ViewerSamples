@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/gettoken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="get token" />
+    
+       <TextView
+        android:id="@+id/textViewToken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gettoken"	 
+        android:layout_below="@+id/gettoken"  
+        android:background="@drawable/textview_border"
+        android:text="Token" />
+       
+         <Button
+        android:id="@+id/createbucket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/gettoken"	     
+         android:layout_below="@+id/textViewToken"  
+        android:text="create bucket" />         
+         
+	    <EditText
+	        android:id="@+id/txtViewBucketName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/gettoken"
+	        android:layout_below="@+id/createbucket"  
+	        android:ems="10"
+	        android:text="xiaodongtestbucket1" >      
+	    </EditText>
+	         
+       
+        <Button
+        android:id="@+id/btnBrowserModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  
+         android:layout_below="@+id/txtViewBucketName"    
+              android:layout_alignLeft="@+id/gettoken" 
+        android:layout_marginBottom="15dp"
+        android:text="Browser Model" />
+        
+        <TextView
+        android:id="@+id/txtViewModelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  
+            android:layout_below="@+id/btnBrowserModel"    
+              android:layout_alignLeft="@+id/gettoken"         
+        android:text="Model Name" /> 
+        
+         <Button
+        android:id="@+id/uploadmodel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"   
+           android:layout_below="@+id/txtViewModelName"      
+             android:layout_alignLeft="@+id/gettoken"  
+        android:text="upload model" />       
+    
+    <TextView
+        android:id="@+id/textViewUrn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+          android:layout_below="@+id/uploadmodel"      
+             android:layout_alignLeft="@+id/gettoken"  
+        android:text="Urn" />
+    
+        <Button
+        android:id="@+id/btnpostbubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+          android:layout_below="@+id/textViewUrn"      
+             android:layout_alignLeft="@+id/gettoken"  
+        android:text="Post Bubble" /> 
+        
+          <TextView
+        android:id="@+id/txtviewbubblestatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnpostbubble"      
+             android:layout_alignLeft="@+id/gettoken"  
+        android:text="Bubble Status" />
+
+     
+    <Button
+        android:id="@+id/showthumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_below="@+id/txtviewbubblestatus"      
+             android:layout_alignLeft="@+id/gettoken"  
+        android:text="Show Thumnail" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showthumbnail"      
+             android:layout_alignLeft="@+id/gettoken" 
+        android:src="@drawable/ic_launcher" />
+
+</RelativeLayout>
