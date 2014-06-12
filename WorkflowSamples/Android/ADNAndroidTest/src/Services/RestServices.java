@@ -72,7 +72,9 @@ import com.google.gson.Gson;
 public class RestServices {
 	
 	
-	private static String BASEUrl = "https://autodesk-test.apigee.net";	 
+	//private static String BASEUrl = "https://autodesk-test.apigee.net";	 
+	//private static String BASEUrl = "https://developer-stg.api.autodesk.com";
+	private static String BASEUrl = "https://developer.autodesk.com";
 	private static String authenticate_srv = "/authentication/v1/authenticate";
 	private static String upload_srv = "/oss/v1/buckets";
 	private static String settoken_srv = "/utility/v1/settoken";
@@ -360,7 +362,7 @@ public class RestServices {
 				 HttpResponse response = httpclient.execute(request,localContext);
 			 
 				 StatusLine statusLine = response.getStatusLine();
-				 if(statusLine.getStatusCode() == HttpStatus.SC_OK)
+				 if(statusLine.getStatusCode() == HttpStatus.SC_OK || statusLine.getStatusCode() == 201)
 				 {	    
 					 //succeeded
 					 //get response json data
