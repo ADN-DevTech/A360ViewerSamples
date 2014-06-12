@@ -1,0 +1,13 @@
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\AngularJsUI\bin\AngularJsUI.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\AngularJsUI\bin\AngularJsUI.pdb
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\AngularJsUI\obj\Debug\AngularJsUI.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\AngularJsUI\obj\Debug\AngularJsUI.pdb
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\AngularJsUI\obj\Debug\AngularJsUI.csprojResolveAssemblyReference.cache
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\AngularJsUI\bin\ViewerApigeeUtil.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\AngularJsUI\bin\RestSharp.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\AngularJsUI\bin\ViewerApigeeUtil.pdb
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\AngularJsUI\bin\RestSharp.xml
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\AngularJsUI\bin\log4net.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\AngularJsUI\bin\this.Log-log4net.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\AngularJsUI\bin\this.Log.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\AngularJsUI\bin\log4net.xml

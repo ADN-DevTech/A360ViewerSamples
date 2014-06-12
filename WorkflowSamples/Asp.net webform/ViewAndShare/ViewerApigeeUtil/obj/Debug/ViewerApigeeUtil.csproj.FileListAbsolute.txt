@@ -1,0 +1,14 @@
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\ViewerApigeeUtil\bin\Debug\ViewerApigeeUtil.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\ViewerApigeeUtil\bin\Debug\ViewerApigeeUtil.pdb
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\ViewerApigeeUtil\bin\Debug\RestSharp.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\ViewerApigeeUtil\bin\Debug\RestSharp.xml
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\ViewerApigeeUtil\obj\Debug\ViewerApigeeUtil.csprojResolveAssemblyReference.cache
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\ViewerApigeeUtil\obj\Debug\ViewerApigeeUtil.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\AngularJsUI\ViewerApigeeUtil\obj\Debug\ViewerApigeeUtil.pdb
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewerApigeeUtil\bin\Debug\ViewerApigeeUtil.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewerApigeeUtil\bin\Debug\ViewerApigeeUtil.pdb
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewerApigeeUtil\bin\Debug\RestSharp.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewerApigeeUtil\bin\Debug\RestSharp.xml
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewerApigeeUtil\obj\Debug\ViewerApigeeUtil.csprojResolveAssemblyReference.cache
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewerApigeeUtil\obj\Debug\ViewerApigeeUtil.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewerApigeeUtil\obj\Debug\ViewerApigeeUtil.pdb

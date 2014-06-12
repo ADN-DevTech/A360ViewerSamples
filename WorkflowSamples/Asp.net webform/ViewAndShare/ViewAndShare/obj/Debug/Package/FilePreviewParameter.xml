@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="checkoutmymodel" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\duda\\Documents\\GitHub\\A360ViewerSamplesInternal\\DevTech-Samples\\Daniel\\ViewAndShare\\ViewAndShare\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\duda\\Documents\\GitHub\\A360ViewerSamplesInternal\\DevTech-Samples\\Daniel\\ViewAndShare\\ViewAndShare\\obj\\Debug\\Package\\PackageTmp$" />
+  </parameter>
+</parameters>

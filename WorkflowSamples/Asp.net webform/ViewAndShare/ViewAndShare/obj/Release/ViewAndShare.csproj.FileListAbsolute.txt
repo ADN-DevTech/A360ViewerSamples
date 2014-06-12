@@ -1,0 +1,13 @@
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\bin\ViewAndShare.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\bin\ViewAndShare.pdb
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\bin\log4net.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\bin\this.Log-log4net.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\bin\this.Log.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\bin\ViewerApigeeUtil.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\bin\RestSharp.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\bin\ViewerApigeeUtil.pdb
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\bin\log4net.xml
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\bin\RestSharp.xml
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\obj\Release\ViewAndShare.csprojResolveAssemblyReference.cache
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\obj\Release\ViewAndShare.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\obj\Release\ViewAndShare.pdb
