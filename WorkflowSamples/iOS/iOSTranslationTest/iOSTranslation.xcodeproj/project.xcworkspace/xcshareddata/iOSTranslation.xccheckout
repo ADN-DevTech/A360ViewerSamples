@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DD36727A-528F-4D9B-867B-84FBC0B6F29D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iOSTranslation</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1AFE58D9-12F3-4E3B-9526-A9719EBD67EA</key>
+		<string>https://github.com/ADN-DevTech/A360ViewerSamplesInternal.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DevTech-Samples/Adam/iOSApigee/iOSTranslation.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1AFE58D9-12F3-4E3B-9526-A9719EBD67EA</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ADN-DevTech/A360ViewerSamplesInternal.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1AFE58D9-12F3-4E3B-9526-A9719EBD67EA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1AFE58D9-12F3-4E3B-9526-A9719EBD67EA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>A360ViewerSamplesInternal</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Adsk View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="AdskViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryt-nL-sc7">
+                                <rect key="frame" x="139" y="28" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logIn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="va1-Ie-GLe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UV-z9-0wf">
+                                <rect key="frame" x="20" y="267" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9N-IJ-blx">
+                                <rect key="frame" x="124" y="95" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select File">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectFile:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Bdk-VV-t6I"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeC-yf-LFx">
+                                <rect key="frame" x="20" y="133" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAU-1Y-tHN">
+                                <rect key="frame" x="106" y="162" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Upload to A360">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadFile:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wq1-vF-coL"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XFW-ux-022">
+                                <rect key="frame" x="40" y="320" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="GFS-ii-rt0"/>
+                                    <constraint firstAttribute="width" constant="240" id="dPK-MT-Yho"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFX-bw-UoR">
+                                <rect key="frame" x="20" y="200" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ef-kt-mXc">
+                                <rect key="frame" x="20" y="66" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XY-JW-LKb">
+                                <rect key="frame" x="106" y="229" width="109" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Check Progress">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkProgress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4Xk-ei-04g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UAU-1Y-tHN" firstAttribute="top" secondItem="e9N-IJ-blx" secondAttribute="bottom" constant="37" id="1Qb-gg-e9U"/>
+                            <constraint firstAttribute="centerX" secondItem="aFX-bw-UoR" secondAttribute="centerX" id="3oX-nr-ELA"/>
+                            <constraint firstItem="NeC-yf-LFx" firstAttribute="top" secondItem="e9N-IJ-blx" secondAttribute="bottom" constant="8" symbolic="YES" id="4tC-KP-8nY"/>
+                            <constraint firstItem="0UV-z9-0wf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="9fZ-Ht-uce"/>
+                            <constraint firstItem="aFX-bw-UoR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="AOP-2R-gHy"/>
+                            <constraint firstAttribute="centerX" secondItem="Ryt-nL-sc7" secondAttribute="centerX" id="CGG-bW-rHS"/>
+                            <constraint firstAttribute="centerX" secondItem="5ef-kt-mXc" secondAttribute="centerX" id="Eu0-ar-2Y6"/>
+                            <constraint firstItem="8XY-JW-LKb" firstAttribute="top" secondItem="UAU-1Y-tHN" secondAttribute="bottom" constant="37" id="GXy-Nc-bBy"/>
+                            <constraint firstAttribute="centerX" secondItem="NeC-yf-LFx" secondAttribute="centerX" id="Gm4-cm-mif"/>
+                            <constraint firstItem="e9N-IJ-blx" firstAttribute="top" secondItem="Ryt-nL-sc7" secondAttribute="bottom" constant="37" id="HK3-Z7-iHe"/>
+                            <constraint firstAttribute="trailing" secondItem="NeC-yf-LFx" secondAttribute="trailing" constant="20" symbolic="YES" id="HwP-vy-Ykp"/>
+                            <constraint firstAttribute="centerX" secondItem="XFW-ux-022" secondAttribute="centerX" id="KoH-w4-jhi"/>
+                            <constraint firstAttribute="trailing" secondItem="0UV-z9-0wf" secondAttribute="trailing" constant="20" symbolic="YES" id="MDT-ke-E0V"/>
+                            <constraint firstAttribute="trailing" secondItem="aFX-bw-UoR" secondAttribute="trailing" constant="20" symbolic="YES" id="YAa-LB-2aq"/>
+                            <constraint firstItem="5ef-kt-mXc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="YxV-Jy-V9p"/>
+                            <constraint firstAttribute="centerX" secondItem="8XY-JW-LKb" secondAttribute="centerX" id="bbb-X6-5KQ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XFW-ux-022" secondAttribute="bottom" constant="20" symbolic="YES" id="bm8-zf-3nn"/>
+                            <constraint firstItem="Ryt-nL-sc7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" symbolic="YES" id="bpD-mj-jkD"/>
+                            <constraint firstAttribute="centerX" secondItem="UAU-1Y-tHN" secondAttribute="centerX" id="dRZ-ji-y7b"/>
+                            <constraint firstAttribute="centerX" secondItem="0UV-z9-0wf" secondAttribute="centerX" id="dRm-x4-CH3"/>
+                            <constraint firstItem="5ef-kt-mXc" firstAttribute="top" secondItem="Ryt-nL-sc7" secondAttribute="bottom" constant="8" symbolic="YES" id="egU-EY-BbK"/>
+                            <constraint firstAttribute="trailing" secondItem="5ef-kt-mXc" secondAttribute="trailing" constant="20" symbolic="YES" id="isc-Md-ZTA"/>
+                            <constraint firstItem="aFX-bw-UoR" firstAttribute="top" secondItem="UAU-1Y-tHN" secondAttribute="bottom" constant="8" symbolic="YES" id="piS-Nd-FOh"/>
+                            <constraint firstItem="NeC-yf-LFx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="qkA-Rr-YuB"/>
+                            <constraint firstAttribute="centerX" secondItem="e9N-IJ-blx" secondAttribute="centerX" id="yJM-su-e4q"/>
+                            <constraint firstItem="0UV-z9-0wf" firstAttribute="top" secondItem="8XY-JW-LKb" secondAttribute="bottom" constant="8" symbolic="YES" id="ywB-Bc-sXM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accessToken" destination="5ef-kt-mXc" id="5uA-U5-ndD"/>
+                        <outlet property="fileName" destination="NeC-yf-LFx" id="jCF-NW-Q7p"/>
+                        <outlet property="progress" destination="0UV-z9-0wf" id="ipo-bw-DaH"/>
+                        <outlet property="thumbnail" destination="XFW-ux-022" id="s1g-Gw-Yu7"/>
+                        <outlet property="uploadResult" destination="aFX-bw-UoR" id="49H-iP-Bac"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="430"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

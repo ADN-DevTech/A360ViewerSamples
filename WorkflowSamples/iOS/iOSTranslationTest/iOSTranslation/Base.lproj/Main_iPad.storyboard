@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Adsk View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AdskViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HC0-JD-Sox"/>
+                        <viewControllerLayoutGuide type="bottom" id="wMB-UO-lyu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3EW-EZ-DuL">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrV-L6-tqG">
+                                <rect key="frame" x="348" y="183" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select File">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fDy-mi-LBb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fv-WI-t8t">
+                                <rect key="frame" x="363" y="116" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9sl-WO-AYm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vt-sM-4Cv">
+                                <rect key="frame" x="20" y="154" width="728" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbG-nl-V7G">
+                                <rect key="frame" x="20" y="221" width="728" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLY-tM-m6Y">
+                                <rect key="frame" x="330" y="250" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Upload to A360">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vrV-Nv-Ynw"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9kr-j4-X96">
+                                <rect key="frame" x="264" y="384" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="1ib-Za-wgl"/>
+                                    <constraint firstAttribute="width" constant="240" id="R2o-Fu-cCR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHF-bc-514">
+                                <rect key="frame" x="20" y="355" width="728" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJd-eV-74B">
+                                <rect key="frame" x="20" y="288" width="728" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaU-rt-5kH">
+                                <rect key="frame" x="327" y="317" width="109" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Check Progress">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkProgress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oSe-qt-tZK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="YHF-bc-514" secondAttribute="centerX" id="22w-s0-w75"/>
+                            <constraint firstItem="cbG-nl-V7G" firstAttribute="leading" secondItem="3EW-EZ-DuL" secondAttribute="leading" constant="20" symbolic="YES" id="3Xi-IA-oa2"/>
+                            <constraint firstAttribute="centerX" secondItem="4fv-WI-t8t" secondAttribute="centerX" id="4Lc-K1-xFk"/>
+                            <constraint firstItem="8Vt-sM-4Cv" firstAttribute="leading" secondItem="3EW-EZ-DuL" secondAttribute="leading" constant="20" symbolic="YES" id="4uF-X9-JlN"/>
+                            <constraint firstItem="cbG-nl-V7G" firstAttribute="top" secondItem="nrV-L6-tqG" secondAttribute="bottom" constant="8" id="5wK-Up-wxZ"/>
+                            <constraint firstAttribute="trailing" secondItem="YHF-bc-514" secondAttribute="trailing" constant="20" symbolic="YES" id="6Iz-DZ-OzB"/>
+                            <constraint firstItem="nrV-L6-tqG" firstAttribute="top" secondItem="4fv-WI-t8t" secondAttribute="bottom" constant="37" id="8HW-pl-ubp"/>
+                            <constraint firstItem="YHF-bc-514" firstAttribute="top" secondItem="TaU-rt-5kH" secondAttribute="bottom" constant="8" id="8Ju-vZ-eFi"/>
+                            <constraint firstItem="8Vt-sM-4Cv" firstAttribute="top" secondItem="4fv-WI-t8t" secondAttribute="bottom" constant="8" symbolic="YES" id="8X2-TA-Ve7"/>
+                            <constraint firstAttribute="centerX" secondItem="9kr-j4-X96" secondAttribute="centerX" id="95m-eF-maM"/>
+                            <constraint firstAttribute="trailing" secondItem="MJd-eV-74B" secondAttribute="trailing" constant="20" symbolic="YES" id="ANV-Xj-q4L"/>
+                            <constraint firstAttribute="centerX" secondItem="8Vt-sM-4Cv" secondAttribute="centerX" id="CRV-vr-EyW"/>
+                            <constraint firstItem="9kr-j4-X96" firstAttribute="top" secondItem="TaU-rt-5kH" secondAttribute="bottom" constant="37" id="CgZ-Zl-O1U"/>
+                            <constraint firstItem="YHF-bc-514" firstAttribute="leading" secondItem="3EW-EZ-DuL" secondAttribute="leading" constant="20" symbolic="YES" id="DHR-Pc-QDr"/>
+                            <constraint firstItem="4fv-WI-t8t" firstAttribute="top" secondItem="HC0-JD-Sox" secondAttribute="bottom" constant="96" id="FSG-GB-Tsb"/>
+                            <constraint firstAttribute="centerX" secondItem="TaU-rt-5kH" secondAttribute="centerX" constant="2.5" id="Fz2-m4-mrb"/>
+                            <constraint firstItem="TaU-rt-5kH" firstAttribute="top" secondItem="SLY-tM-m6Y" secondAttribute="bottom" constant="37" id="Ird-XJ-2zA"/>
+                            <constraint firstAttribute="centerX" secondItem="MJd-eV-74B" secondAttribute="centerX" id="JEC-MJ-XKb"/>
+                            <constraint firstAttribute="centerX" secondItem="cbG-nl-V7G" secondAttribute="centerX" id="MeS-cD-l0y"/>
+                            <constraint firstAttribute="centerX" secondItem="SLY-tM-m6Y" secondAttribute="centerX" id="MoI-RE-mdD"/>
+                            <constraint firstItem="MJd-eV-74B" firstAttribute="top" secondItem="SLY-tM-m6Y" secondAttribute="bottom" constant="8" id="NCZ-Eb-Pw2"/>
+                            <constraint firstAttribute="centerX" secondItem="nrV-L6-tqG" secondAttribute="centerX" id="cXk-AU-JhO"/>
+                            <constraint firstAttribute="trailing" secondItem="cbG-nl-V7G" secondAttribute="trailing" constant="20" symbolic="YES" id="g2g-LU-Wel"/>
+                            <constraint firstItem="MJd-eV-74B" firstAttribute="leading" secondItem="3EW-EZ-DuL" secondAttribute="leading" constant="20" symbolic="YES" id="q7u-hC-tz0"/>
+                            <constraint firstAttribute="trailing" secondItem="8Vt-sM-4Cv" secondAttribute="trailing" constant="20" symbolic="YES" id="tN1-ft-FHb"/>
+                            <constraint firstItem="9kr-j4-X96" firstAttribute="top" secondItem="TaU-rt-5kH" secondAttribute="bottom" constant="37" id="u4F-aX-HLn"/>
+                            <constraint firstItem="SLY-tM-m6Y" firstAttribute="top" secondItem="nrV-L6-tqG" secondAttribute="bottom" constant="37" id="uGc-p3-ugn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accessToken" destination="8Vt-sM-4Cv" id="oWM-7h-454"/>
+                        <outlet property="fileName" destination="cbG-nl-V7G" id="53G-Il-8Jo"/>
+                        <outlet property="progress" destination="YHF-bc-514" id="MBP-UW-93x"/>
+                        <outlet property="thumbnail" destination="9kr-j4-X96" id="QMy-v6-DYj"/>
+                        <outlet property="uploadResult" destination="MJd-eV-74B" id="ieQ-QQ-73D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
