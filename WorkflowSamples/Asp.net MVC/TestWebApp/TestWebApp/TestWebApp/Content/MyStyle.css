@@ -1,0 +1,135 @@
+#OperationSelectionBox
+{
+    height: 30px;
+    width: 197px;
+    margin-left: 8px;
+    margin-top: 6px;
+    top: 126px;
+    left: 119px;
+}
+#DocIdTB
+{
+    height: 37px;
+    width: 1262px;
+    margin-left: 4px;
+    margin-top: 6px;
+    top: 77px;
+    left: 79px;
+}
+#LoadDocBtn
+{
+    height: 31px;
+    width: 107px;
+    margin-left: 70px;
+    margin-top: 0px;
+    top: 89px;
+    left: 1290px;
+    right: 391px;
+}
+#TranslateUploadedFile {
+    height: 37px;
+    width: 107px;
+    margin-left: 0px;
+    margin-top: 0px;
+    top: 45px;
+    left: 430px;
+}
+
+
+#ChangeCameraPos1
+{
+    height: 30px;
+    width: 30px;
+    margin-left: 70px;
+    margin-top: 0px;
+    top: 201px;
+    left: 1528px;
+    right: 230px;
+}
+#ChangeCameraPos2
+{
+    height: 30px;
+    width: 30px;
+    margin-left: 70px;
+    margin-top: 0px;
+    top: 202px;
+    left: 1424px;
+    right: 308px;
+}
+#DirectionSelect
+{
+    height: 30px;
+    width: 53px;
+    margin-left: 70px;
+    margin-top: 0px;
+    top: 202px;
+    left: 1464px;
+    right: 245px;
+}
+#ZoomCheckBox
+{
+    height: 95px;
+    width: 198px;
+    margin-left: 70px;
+    margin-top: 0px;
+    top: 317px;
+    left: 1432px;
+    right: 158px;
+}
+#NavigateBackBtn
+{
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    top: 128px;
+    left: 82px;
+}
+#NavigateForwardBtn
+{
+    height: 30px;
+    width: 30px;
+    margin-left: 0px;
+    margin-top: 6px;
+    top: 127px;
+    left: 335px;
+}
+#Select2
+{
+    height: 504px;
+    width: 300px;
+    top: 384px;
+    left: 75px;
+    margin-left: 1px;
+    margin-top: 2px;
+}
+#ModelList
+{
+    top: 171px;
+    left: 90px;
+    height: 610px;
+    width: 280px;
+}
+#OutputMessages
+{
+    top: 795px;
+    left: 90px;
+    height: 156px;
+    width: 1369px;
+}
+#Title
+{
+    width: 431px;
+    top: 15px;
+    left: 600px;
+    height: 37px;
+    margin-left: 40px;
+}
+#Text1
+{
+    top: 167px;
+    left: 1492px;
+}
+#search {
+    width: 100px;  height: 37px;
+}
