@@ -1,0 +1,133 @@
+#OperationSelectionBox
+{
+    height: 30px;
+    width: 214px;
+    margin-left: 100px;
+    margin-top: 33px;
+    top: 100px;
+    left: 18px;
+}
+#DocIdTB
+{
+    height: 37px;
+    width: 1080px;
+    margin-left: 70px;
+    margin-top: 36px;
+    top: 49px;
+    left: 320px;
+}
+#TokenText
+{
+    height: 37px;
+    width: 300px;
+    margin-left: 0px;
+    margin-top: 0px;
+    top: 85px;
+    left: 49px;
+    right: 391px;
+}
+#LoadDocBtn
+{
+    height: 37px;
+    width: 150px;
+    margin-left: 0px;
+    margin-top: 0px;
+    top: 85px;
+    left: 1490px;
+    right: 391px;
+}
+
+#ChangeCameraPos1
+{
+    height: 30px;
+    width: 30px;
+    margin-left: 70px;
+    margin-top: 0px;
+    top: 201px;
+    left: 1528px;
+    right: 230px;
+}
+#ChangeCameraPos2
+{
+    height: 30px;
+    width: 30px;
+    margin-left: 70px;
+    margin-top: 0px;
+    top: 202px;
+    left: 1424px;
+    right: 308px;
+}
+#DirectionSelect
+{
+    height: 30px;
+    width: 53px;
+    margin-left: 70px;
+    margin-top: 0px;
+    top: 202px;
+    left: 1464px;
+    right: 245px;
+}
+#ZoomCheckBox
+{
+    height: 95px;
+    width: 198px;
+    margin-left: 70px;
+    margin-top: 0px;
+    top: 317px;
+    left: 1432px;
+    right: 158px;
+}
+#NavigateBackBtn
+{
+    height: 30px;
+    width: 30px;
+    margin-left: 70px;
+    margin-top: 33px;
+    top: 100px;
+    left: 8px;
+}
+#NavigateForwardBtn
+{
+    height: 30px;
+    width: 30px;
+    margin-left: 0px;
+    margin-top: 33px;
+    top: 100px;
+    left: 344px;
+}
+#Select2
+{
+    height: 504px;
+    width: 300px;
+    top: 384px;
+    left: 75px;
+    margin-left: 1px;
+    margin-top: 2px;
+}
+#ModelList
+{
+    top: 170px;
+    left: 77px;
+    height: 700px;
+    width: 300px;
+}
+#OutputMessages
+{
+    top: 720px;
+    left: 395px;
+    height: 156px;
+    width: 1062px;
+}
+#Title
+{
+    width: 431px;
+    top: 15px;
+    left: 600px;
+    height: 37px;
+    margin-left: 40px;
+}
+#Text1
+{
+    top: 167px;
+    left: 1492px;
+}

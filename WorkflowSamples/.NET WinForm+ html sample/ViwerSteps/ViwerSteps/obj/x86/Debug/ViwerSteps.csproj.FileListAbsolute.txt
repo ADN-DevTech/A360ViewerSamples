@@ -1,0 +1,11 @@
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\Asp.net MVC\.NET + html sample\.NET + html sample\ViwerSteps\ViwerSteps\bin\Debug\ViwerSteps.exe.config
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\Asp.net MVC\.NET + html sample\.NET + html sample\ViwerSteps\ViwerSteps\bin\Debug\ViwerSteps.exe
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\Asp.net MVC\.NET + html sample\.NET + html sample\ViwerSteps\ViwerSteps\bin\Debug\ViwerSteps.pdb
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\Asp.net MVC\.NET + html sample\.NET + html sample\ViwerSteps\ViwerSteps\bin\Debug\RestSharp.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\Asp.net MVC\.NET + html sample\.NET + html sample\ViwerSteps\ViwerSteps\bin\Debug\RestSharp.xml
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\Asp.net MVC\.NET + html sample\.NET + html sample\ViwerSteps\ViwerSteps\obj\x86\Debug\ViwerSteps.csprojResolveAssemblyReference.cache
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\Asp.net MVC\.NET + html sample\.NET + html sample\ViwerSteps\ViwerSteps\obj\x86\Debug\ViwerSteps.Form1.resources
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\Asp.net MVC\.NET + html sample\.NET + html sample\ViwerSteps\ViwerSteps\obj\x86\Debug\ViwerSteps.Properties.Resources.resources
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\Asp.net MVC\.NET + html sample\.NET + html sample\ViwerSteps\ViwerSteps\obj\x86\Debug\ViwerSteps.csproj.GenerateResource.Cache
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\Asp.net MVC\.NET + html sample\.NET + html sample\ViwerSteps\ViwerSteps\obj\x86\Debug\ViwerSteps.exe
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\Asp.net MVC\.NET + html sample\.NET + html sample\ViwerSteps\ViwerSteps\obj\x86\Debug\ViwerSteps.pdb

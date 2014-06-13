@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <title>Autodesk one view sample</title>
+ 
+        <link rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.css" />
+        <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.cp.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="MyScript.js"></script>
+        <link rel="stylesheet" href="MyStyle.css" type="text/css" media="screen, projection" />
+</head>
+
+    <body id="ResetView" onload="OnInitialize();">
+
+        <div>
+        </div>
+
+        <input id="Title" readonly="readonly" 
+            style="border-style: hidden; position: fixed; font-family: Arial, Helvetica, sans-serif; font-size: 32px; font-weight: bolder; color: #FF0000;" 
+            type="text" value="Autodesk OneView sample" 
+            onclick="return Title_onclick()" />
+
+        <input id="DocIdTB" type="text" style="border-style: solid; position: fixed; background-color: #C0C0C0; font-family: Arial, Helvetica, sans-serif; 
+            font-size: medium; font-weight: bold;" value="" />
+
+        <input id="LoadDocBtn" type="button" value="Load" 
+            onclick="return LoadDocumentBtnClicked()" style="position: fixed"/>
+
+        <select id="OperationSelectionBox" name="D1" onchange="OnChangeOperation();"
+            style="border-style: solid; position: fixed; background-color: #C0C0C0; font-family: Arial, Helvetica, sans-serif; font-size: medium; font-weight: bold;">
+            <option selected>Isolate</option>
+            <option>Select</option>
+        </select>
+
+         <select id="ModelList" onclick="Model_selectedItem(this);" multiple="multiple" 
+            style="border-width: thick; border-style: solid; position: fixed; overflow: scroll; background-color: #C0C0C0; font-family: Arial, Helvetica, sans-serif; font-size: medium; font-weight: bold;">
+            <option></option>
+        </select>
+
+        <input id="NavigateBackBtn" type="button" value="<<" onclick="return onNavigateBack()" style="position: fixed"></button>
+        <input id="NavigateForwardBtn" type="button" value=">>" onclick="return onNavigateForward()" style="position: fixed"></button>
+       
+        <div style="border-style: solid; position: fixed; top: 131px; left: 394px; height: 567px; width: 767px;"  
+            id="3dViewDiv">
+        </div>
+        <table id="PropertiesTable" 
+            style="border-style: solid; width: 291px; position: fixed; top: 140px; left: 1180px; height: 570px; overflow: scroll; right: 387px; table-layout: fixed;" 
+            border="1" frame="box">
+            <tr>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+        </table>
+        
+        <select id="OutputMessages" multiple="multiple" name="D3" 
+            style="border-width: thick; overflow: scroll; position: fixed; border-style: solid; background-color: #C0C0C0; font-family: Arial, Helvetica, sans-serif; font-size: medium; font-weight: bold;">
+            <option></option>
+        </select>
+
+        &nbsp;
+        <input id="ChangeCameraPos1" type="button" value="+" onclick="ChangeCameraPosPositive()" style="position: fixed"/>
+        <input id="ChangeCameraPos2" type="button" value="-" onclick="ChangeCameraPosNegative()" style="position: fixed"/>
+    
+        <select id="DirectionSelect" name="Direction" onchange="OnChangeDirection();" style="border-style: solid; position: fixed; background-color: #C0C0C0; font-family: Arial, Helvetica, sans-serif; font-size: medium; font-weight: bold;">
+            <option selected>X</option>
+            <option>Y</option>
+            <option>Z</option>
+        </select>
+        
+        <form style="position: fixed; top: 263px; left: 1496px; bottom: 255px; width: 319px;" 
+        id="CheckboxForm" name="CheckboxForm">
+            <input type="checkbox" id="ZoomCheckbox" name="ZoomCheckbox" value="Zoom">Zoom<br />
+            <br />
+            <input type="checkbox" id="SelectionChangedEvtCheckbox" name="SelectionChangedEvtCheckbox"  onchange = "OnChangeSelectionChangedEvtCheckbox()" value="SelectionEvent">Selection Changed event<br />
+            <input type="checkbox" id="IsolateEvtCheckbox" name="IsolateEvtCheckbox"  onchange = "OnChangeIsolateEvtCheckbox()" value="IsolateEvent">Isolate event<br />
+            <input type="checkbox" id="HideEvtCheckbox" name="HideEvtCheckbox"  onchange = "OnChangeHideEvtCheckbox()" value="HideEvent">Hide event<br />
+            <input type="checkbox" id="ShowEvtCheckbox" name="ShowEvtCheckbox"  onchange = "OnChangeShowEvtCheckbox()" value="ShowEvent">Show event<br />
+            <input type="checkbox" id="ProgressUpdateEvtCheckbox" name="ProgressUpdateEvtCheckbox"  onchange = "OnChangeProgressUpdateEvtCheckbox()" value="ProgressUpdateEvent">Progress update event<br />
+            <input type="checkbox" id="ErrorEvtCheckbox" name="ErrorEvtCheckbox"  onchange = "OnChangeErrorEvtCheckbox()" value="ErrorEvent">Error event<br />
+            <input type="checkbox" id="EscapeEvtCheckbox" name="EscapeEvtCheckbox"  onchange = "OnChangeEscapeEvtCheckbox()" value="EscapeEvent">Escape event<br />
+            <input type="checkbox" id="NavigationModeEvtCheckbox" name="NavigationModeEvtCheckbox"  onchange = "OnChangeNavigationModeEvtCheckbox()" value="NavigationModeChangedEvent">Navigation mode changed event<br />
+            <input type="checkbox" id="CameraChangedEvtCheckbox" name="CameraChangedEvtCheckbox"  onchange = "OnChangeCameraChangedEvtCheckbox()" value="CameraChangedEvent">Camera Changed event<br />
+            <input type="checkbox" id="HighlightEvtCheckbox" name="HighlightEvtCheckbox"  onchange = "OnChangeHighlightEvtCheckbox()" value="HighlightEvent">Highlight event<br />
+            <input type="checkbox" id="GeometryLoadedEvtCheckbox" name="GeometryLoadedEvtCheckbox"  onchange = "OnChangeGeometryLoadedEvtCheckbox()" value="GeometryLoadedEvent">Geometry loaded event<br />
+        </form>
+        <input id="Text1" readonly="readonly" 
+            style="border-style: hidden; position: fixed;" type="text" 
+            value="Camera Position" />
+        <input type=hidden id="ResetViewBtn" style="position: fixed; top: 629px; left: 1501px;" type="button" onclick="OnResetViewBtnClicked()" value="Reset View" />
+        <input id="TokenText" 
+            style="font-family: Arial, Helvetica, sans-serif; font-size: medium; font-weight: bold; border-style: solid; position: fixed; top: 82px; left: 75px; background-color: #C0C0C0; width: 298px; height: 38px;" 
+            type="text" />
+    </body>
+</html>
