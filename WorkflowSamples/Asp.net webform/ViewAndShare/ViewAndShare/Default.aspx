@@ -437,10 +437,9 @@
 
                 var options = {};
                 // Environment controls service end points viewer uses.
-                //options.env = 'ApigeeStaging';
 
-                //omit the env for production ? 
-                options.env = 'ApigeeProd';
+                //omit the env for production environment
+                options.env = '<env here>';
                 // Access token required for authentication and authorization.
                 // It is for now a 3 legged oauth 1 access token.
                 options.accessToken = token;
