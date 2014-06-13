@@ -69,7 +69,7 @@ public class AsyncUpload extends  AsyncTask<List<String>, Void, Void>{
 	@Override
 	protected Void doInBackground(List<String>... params) {
 		// TODO Auto-generated method stub
-		if(RestServices.srv_upload(params[0].get(0),params[0].get(1)) )  // password
+		if(RestServices.srv_upload(params[0].get(0),params[0].get(1)) )   
 		 {  			 
 			 _isOK = true;
 		 }

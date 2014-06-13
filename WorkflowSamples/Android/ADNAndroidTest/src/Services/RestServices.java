@@ -69,11 +69,8 @@ import android.widget.Toast;
 import com.example.adnandroidapigeetest.GlobalHelper;
 import com.google.gson.Gson;
 
-public class RestServices {
-	
-	
-	//private static String BASEUrl = "https://autodesk-test.apigee.net";	 
-	//private static String BASEUrl = "https://developer-stg.api.autodesk.com";
+public class RestServices { 
+	 
 	private static String BASEUrl = "https://developer.autodesk.com";
 	private static String authenticate_srv = "/authentication/v1/authenticate";
 	private static String upload_srv = "/oss/v1/buckets";

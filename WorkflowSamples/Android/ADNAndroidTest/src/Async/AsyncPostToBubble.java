@@ -69,7 +69,7 @@ public class AsyncPostToBubble extends  AsyncTask<List<String>, Void, Void>{
 	@Override
 	protected Void doInBackground(List<String>... params) {
 		// TODO Auto-generated method stub
-		if(RestServices.srv_post_bubble(params[0].get(0)) )  // password
+		if(RestServices.srv_post_bubble(params[0].get(0)) ) 
 		 {  			 
 			 _isOK = true;
 		 }

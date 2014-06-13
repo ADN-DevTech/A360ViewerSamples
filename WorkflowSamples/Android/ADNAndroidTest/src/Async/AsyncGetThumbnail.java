@@ -132,7 +132,7 @@ public class AsyncGetThumbnail extends  AsyncTask<List<String>, Void, Void>{
 	protected Void doInBackground(List<String>... params) {
 		// TODO Auto-generated method stub
 		_bp = RestServices.srv_get_bubble_thumb(params[0].get(0));
-		if(_bp != null )  // password
+		if(_bp != null )   
 		 {  			 
 			 _isOK = true;
 		 }

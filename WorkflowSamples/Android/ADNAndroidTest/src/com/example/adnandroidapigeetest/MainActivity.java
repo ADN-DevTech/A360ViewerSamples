@@ -63,11 +63,7 @@ public class MainActivity extends Activity {
 		//login button click
 		btn_get_token.setOnClickListener(new View.OnClickListener() {
 			        public void onClick(View v) { 
-			          
-			        	//String xx = "urn:adsk.objects:os.object:xiaodongtest1/gatehouse.nwd";
-			        	//String _urn = android.util.Base64.encodeToString(xx.getBytes(),Base64.NO_WRAP);;
-			        	//String _urn1 = android.util.Base64.encodeToString(xx.getBytes(),Base64.DEFAULT);;
-			        			
+			           
 			        	List<String> forAsync = new ArrayList<String>();
 			        	String clienid = getString(R.string._clientid);
 				        String clientsecret = getString(R.string._clientkey);
@@ -75,8 +71,7 @@ public class MainActivity extends Activity {
 				        forAsync.add(clientsecret);
 				        
 			        	ProgressDialog progress = new ProgressDialog(MainActivity.this);
-			        	//progress.setMessage(getString(R.string.msg_prog_login_async));
-			        	AsyncToken task_gettoken =  new AsyncToken(progress);         
+ 			        	AsyncToken task_gettoken =  new AsyncToken(progress);         
 			        	task_gettoken._activity = MainActivity.this;
 			        	task_gettoken.execute(forAsync); 
 			        	
@@ -96,8 +91,7 @@ public class MainActivity extends Activity {
 		        forAsync.add(dummy2);
 		        
 	        	ProgressDialog progress = new ProgressDialog(MainActivity.this);
-	        	//progress.setMessage(getString(R.string.msg_prog_login_async));
-	        	AsyncCreateBucket task_upload =  new AsyncCreateBucket(progress);         
+ 	        	AsyncCreateBucket task_upload =  new AsyncCreateBucket(progress);         
 	        	task_upload._activity = MainActivity.this;
 	        	task_upload.execute(forAsync);  
 	        	 
@@ -152,8 +146,7 @@ public class MainActivity extends Activity {
 		        forAsync.add(dummy1);
 		        forAsync.add(dummy2);
 		        
-	        	ProgressDialog progress = new ProgressDialog(MainActivity.this);
-	        	//progress.setMessage(getString(R.string.msg_prog_login_async));
+	        	ProgressDialog progress = new ProgressDialog(MainActivity.this);	      
 	        	AsyncPostToBubble post_bubble =  new AsyncPostToBubble(progress);         
 	        	post_bubble._activity = MainActivity.this;
 	        	post_bubble.execute(forAsync);  
@@ -173,8 +166,7 @@ public class MainActivity extends Activity {
 		        forAsync.add(dummy2);
 		        
 	        	ProgressDialog progress = new ProgressDialog(MainActivity.this);
-	        	//progress.setMessage(getString(R.string.msg_prog_login_async));
-	        	AsyncGetThumbnail task_thumb =  new AsyncGetThumbnail(progress);         
+ 	        	AsyncGetThumbnail task_thumb =  new AsyncGetThumbnail(progress);         
 	        	task_thumb._activity = MainActivity.this;
 	        	task_thumb.execute(forAsync);  
 	        	 
