@@ -222,11 +222,12 @@
 <%--    <link rel="stylesheet" href="https://viewing-staging.api.autodesk.com/viewingservice/v1/viewers/style.css" type="text/css" />
     <script src="https://viewing-staging.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js"></script>--%>
 
+<%--                <link rel="stylesheet" href="https://viewing.api.autodesk.com/viewingservice/v1/viewers/style.css" type="text/css"/>
+        <script src="https://viewing.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js"></script>--%>
 
-
-                <link rel="stylesheet" href="https://viewing.api.autodesk.com/viewingservice/v1/viewers/style.css" type="text/css"/>
-        <script src="https://viewing.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js"></script>
-
+    <link rel="stylesheet" href="http://adskhack.azurewebsites.net/HackathonMaterials/Library/style.css" />
+    <script src="http://adskhack.azurewebsites.net/HackathonMaterials/Library/viewer3D.min.js"></script>
+    <script src="http://adskhack.azurewebsites.net/HackathonMaterials/Library/viewer3D.min.cp.js"></script>
 
 
     <script type="text/javascript">
@@ -371,7 +372,7 @@
                                 var token = '<%=Session["token"] == null ? "" : Session["token"].ToString()%>';
 
                                 //check translation progress
-                                checkProgress(g_urn);
+                                checkProgress(g_urn, token);
 
 
                                
@@ -406,10 +407,11 @@
                     data: data,
                     success: function (percentage) {
                         
-                        //wait for success to view, actully you don't have to
-                        if (percentage === '100%') {
 
-                            clearInterval(checkProgress);
+                        //wait for success to view, actully you don't have to
+                        if (percentage!= '' && percentage === '100%') {
+
+                            //window.clearInterval(checkProgress);
                             createAutoClosingAlert('Congratulations!! ' + percentage + " translation completed.");
 
 
@@ -418,17 +420,18 @@
                         }
                         else {
 
-                            createAutoClosingAlert(percentage + "translation completed.");
+                            createAutoClosingAlert("translation is in progress." + percentage + " completed");
 
                         }
                     },
                     error: function () {
+                        //clearInterval(checkProgress);
                         createAutoClosingAlert_Error("error when checking progress");
                     }
                        
                 });
 
-                window.setInterval(checkProgress, 5000, urn, token);
+                //window.setInterval(checkProgress, 10000, urn, token);
 
             }
 
@@ -437,9 +440,10 @@
 
                 var options = {};
                 // Environment controls service end points viewer uses.
+                //options.env = 'ApigeeStaging';
 
-                //omit the env for production environment
-                options.env = '<env here>';
+                //omit the env for production ? 
+                options.env = 'ApigeeProd';
                 // Access token required for authentication and authorization.
                 // It is for now a 3 legged oauth 1 access token.
                 options.accessToken = token;
