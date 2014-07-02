@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.SessionState;
-using ViewerApigeeUtil;
-using ViewerApigeeUtil.Models;
+using ViewerUtil;
+using ViewerUtil.Models;
 
 namespace ViewAndShare
 {
@@ -34,6 +34,12 @@ namespace ViewAndShare
             accessToken = context.Session["token"].ToString();
             string bucketKey = SecretConstants.DEFAULT_BUCKET_KEY;
 
+            //create bucket if not exist
+            if (!util.IsBucketExist(bucketKey,accessToken))
+            {
+                util.CreateBucket(bucketKey, accessToken);
+            }
+
 
             //only single file supported by now
             if (context.Request.Files.Count > 0)
@@ -42,6 +48,8 @@ namespace ViewAndShare
                 foreach (string key in files)
                 {
                     HttpPostedFile file = files[key];
+                    
+                    
 
                     string base64Urn = util.UploadFile(bucketKey, accessToken, file);
                     if (base64Urn != string.Empty) //upload success

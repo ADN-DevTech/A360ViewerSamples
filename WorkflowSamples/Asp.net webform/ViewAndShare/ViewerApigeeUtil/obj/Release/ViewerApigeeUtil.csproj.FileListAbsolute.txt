@@ -1,7 +1,0 @@
-C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewerApigeeUtil\bin\Release\ViewerApigeeUtil.dll
-C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewerApigeeUtil\bin\Release\ViewerApigeeUtil.pdb
-C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewerApigeeUtil\bin\Release\RestSharp.dll
-C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewerApigeeUtil\bin\Release\RestSharp.xml
-C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewerApigeeUtil\obj\Release\ViewerApigeeUtil.csprojResolveAssemblyReference.cache
-C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewerApigeeUtil\obj\Release\ViewerApigeeUtil.dll
-C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewerApigeeUtil\obj\Release\ViewerApigeeUtil.pdb
