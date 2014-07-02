@@ -20,8 +20,6 @@ namespace ViewerUtil
             m_client = new RestClient(baseUrl);
         }
 
-
-
         public AccessToken GetAccessToken(string clientId, string clientSecret)
         {
             AccessToken token = null;
@@ -45,7 +43,6 @@ namespace ViewerUtil
                 }
             }
             return token;
-
         }
 
 
@@ -62,18 +59,9 @@ namespace ViewerUtil
 
             IRestResponse<BucketDetails> resp = m_client
                 .Execute<BucketDetails>(reqCreateBucket);
-            if (resp.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
-
+            
+            return resp.StatusCode == System.Net.HttpStatusCode.OK;
         }
-
 
         public BucketDetails GetBucketDetails(string defaultBucketKey, string accessToken)
         {
@@ -96,13 +84,7 @@ namespace ViewerUtil
             {
                 return null;
             }
-
-
-
-
         }
-
-
 
         public bool CreateBucket(string defaultBucketKey, string accessToken)
         {
@@ -122,16 +104,8 @@ namespace ViewerUtil
             IRestResponse respBC = m_client
                 .Execute(reqCreateBucket);
 
-            if (respBC.StatusCode == System.Net.HttpStatusCode.OK
-                    || respBC.StatusCode == System.Net.HttpStatusCode.Conflict) // already existed
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
+            return (respBC.StatusCode == System.Net.HttpStatusCode.OK
+              || respBC.StatusCode == System.Net.HttpStatusCode.Conflict); // already existed
         }
 
         ////The settoken call will validate the token and set the token as 
@@ -187,9 +161,7 @@ namespace ViewerUtil
                 var id = GetIdValueInJson(content);
                 base64URN = Base64Encode(id);
             }
-
             return base64URN;
-
         }
 
         public bool StartTranslation(string base64URN, string accessToken)
@@ -217,13 +189,11 @@ namespace ViewerUtil
                 //message += " Translation starting...";
 
                 return true;
-
             }
             else if (resp.StatusCode == System.Net.HttpStatusCode.Created)
             {
                 content = resp.Content;
                 //message += " Translation has been posted before, it is ready for viewing";
-
 
                 return true;
             }
@@ -262,7 +232,6 @@ namespace ViewerUtil
                 //}
                 percentage = bt.success;
             }
-
             return percentage;
         }
 
@@ -286,7 +255,5 @@ namespace ViewerUtil
             byte[] bytes = Encoding.UTF8.GetBytes(plainText);
             return Convert.ToBase64String(bytes);
         }
-
-
     }
 }
