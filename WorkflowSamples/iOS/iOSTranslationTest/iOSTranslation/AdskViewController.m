@@ -214,7 +214,7 @@
   json =
   [self
    httpTo: kApiUrl
-   "/viewingservice/v1/bubbles"
+   "/viewingservice/v1/register"
    data: [body dataUsingEncoding:NSUTF8StringEncoding]
    contentType:@"application/json; charset=utf-8"
    method:@"POST" statusCode:&statusCode];
@@ -230,7 +230,7 @@
   NSString * url =
   [NSString stringWithFormat:@"%@%@",
    kApiUrl
-   "/viewingservice/v1/bubbles/",
+   "/viewingservice/v1/",
    [self.fileUrn64 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
   NSDictionary * json =
   [self httpTo:url data:nil
