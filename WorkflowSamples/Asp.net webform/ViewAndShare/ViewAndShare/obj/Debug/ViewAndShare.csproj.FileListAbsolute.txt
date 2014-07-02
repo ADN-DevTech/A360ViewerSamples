@@ -37,5 +37,3 @@ C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\
 C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\obj\Debug\ViewAndShare.csprojResolveAssemblyReference.cache
 C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\obj\Debug\ViewAndShare.dll
 C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\obj\Debug\ViewAndShare.pdb
-C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\bin\Newtonsoft.Json.dll
-C:\Users\duda\Documents\GitHub\A360ViewerSamplesInternal\DevTech-Samples\Daniel\ViewAndShare\ViewAndShare\bin\Newtonsoft.Json.xml

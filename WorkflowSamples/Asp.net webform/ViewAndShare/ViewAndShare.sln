@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewAndShare", "ViewAndShare\ViewAndShare.csproj", "{AB059783-4DA5-446E-960E-3AE93B694AFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewerUtil", "ViewerUtil\ViewerUtil.csproj", "{FC0B05BF-2B1D-4ADC-9133-2796319F79F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewerApigeeUtil", "ViewerApigeeUtil\ViewerApigeeUtil.csproj", "{FC0B05BF-2B1D-4ADC-9133-2796319F79F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

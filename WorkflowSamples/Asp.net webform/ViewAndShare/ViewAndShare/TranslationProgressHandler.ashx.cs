@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.SessionState;
-using ViewerUtil;
-using ViewerUtil.Models;
+using ViewerApigeeUtil;
+using ViewerApigeeUtil.Models;
 
 namespace ViewAndShare
 {

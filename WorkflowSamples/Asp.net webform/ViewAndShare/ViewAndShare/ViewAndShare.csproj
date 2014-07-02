@@ -42,9 +42,6 @@
       <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -75,9 +72,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\sticky-footer-navbar.css" />
     <Content Include="Default.aspx" />
-    <Content Include="defautlbak.txt" />
     <Content Include="FileUploadHandler.ashx" />
-    <Content Include="GetAccessToken.ashx" />
     <None Include="Properties\PublishProfiles\checkoutmymodel.pubxml" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -90,7 +85,6 @@
     <Content Include="Scripts\jquery-1.9.0.js" />
     <Content Include="Scripts\jquery-1.9.0.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
-    <Content Include="Scripts\viewer.js" />
     <Content Include="viewer.html" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-1.9.0.min.map" />
@@ -105,9 +99,6 @@
     </Compile>
     <Compile Include="FileUploadHandler.ashx.cs">
       <DependentUpon>FileUploadHandler.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="GetAccessToken.ashx.cs">
-      <DependentUpon>GetAccessToken.ashx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -130,9 +121,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ViewerUtil\ViewerUtil.csproj">
+    <ProjectReference Include="..\ViewerApigeeUtil\ViewerApigeeUtil.csproj">
       <Project>{fc0b05bf-2b1d-4adc-9133-2796319f79f3}</Project>
-      <Name>ViewerUtil</Name>
+      <Name>ViewerApigeeUtil</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

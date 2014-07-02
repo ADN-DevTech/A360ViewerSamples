@@ -1,0 +1,18 @@
+c:\users\duda\documents\visual studio 2012\Projects\ViewerFirstDemo\ViewerFirstDemo\obj\Debug\ViewerFirstDemo.csprojResolveAssemblyReference.cache
+c:\users\duda\documents\visual studio 2012\Projects\ViewerFirstDemo\ViewerFirstDemo\bin\ViewerFirstDemo.dll
+c:\users\duda\documents\visual studio 2012\Projects\ViewerFirstDemo\ViewerFirstDemo\bin\ViewerFirstDemo.pdb
+c:\users\duda\documents\visual studio 2012\Projects\ViewerFirstDemo\ViewerFirstDemo\bin\ViewerApigeeUtil.dll
+c:\users\duda\documents\visual studio 2012\Projects\ViewerFirstDemo\ViewerFirstDemo\bin\RestSharp.dll
+c:\users\duda\documents\visual studio 2012\Projects\ViewerFirstDemo\ViewerFirstDemo\bin\ViewerApigeeUtil.pdb
+c:\users\duda\documents\visual studio 2012\Projects\ViewerFirstDemo\ViewerFirstDemo\bin\RestSharp.xml
+c:\users\duda\documents\visual studio 2012\Projects\ViewerFirstDemo\ViewerFirstDemo\obj\Debug\ViewerFirstDemo.dll
+c:\users\duda\documents\visual studio 2012\Projects\ViewerFirstDemo\ViewerFirstDemo\obj\Debug\ViewerFirstDemo.pdb
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\HackthonDemo\ViewerFirstDemo\ViewerFirstDemo\bin\ViewerFirstDemo.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\HackthonDemo\ViewerFirstDemo\ViewerFirstDemo\bin\ViewerFirstDemo.pdb
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\HackthonDemo\ViewerFirstDemo\ViewerFirstDemo\bin\ViewerApigeeUtil.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\HackthonDemo\ViewerFirstDemo\ViewerFirstDemo\bin\RestSharp.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\HackthonDemo\ViewerFirstDemo\ViewerFirstDemo\bin\ViewerApigeeUtil.pdb
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\HackthonDemo\ViewerFirstDemo\ViewerFirstDemo\bin\RestSharp.xml
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\HackthonDemo\ViewerFirstDemo\ViewerFirstDemo\obj\Debug\ViewerFirstDemo.csprojResolveAssemblyReference.cache
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\HackthonDemo\ViewerFirstDemo\ViewerFirstDemo\obj\Debug\ViewerFirstDemo.dll
+C:\Users\duda\Documents\GitHub\A360ViewerSamples\WorkflowSamples\HackthonDemo\ViewerFirstDemo\ViewerFirstDemo\obj\Debug\ViewerFirstDemo.pdb
