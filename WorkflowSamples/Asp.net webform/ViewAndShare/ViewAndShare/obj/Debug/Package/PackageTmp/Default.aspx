@@ -62,7 +62,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Project name</a>
+                <a class="navbar-brand" href="#">CheckOutMyModel</a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
@@ -77,27 +77,8 @@
 
     <div class="container">
 
-
-
-        <div id="file-uploading" class="collapse">
-            <%--<input type="file" id="upload-files" name="file">--%>
-            <div id="box">Drag & Drop files from your machine on this box.</div>
-            <div class="text-right">
-                <button id="upload" type="button" class="btn btn-default btn-success">Upload</button>
-
-            </div>
-
-            <div id="alert_placeholder" style="padding: 10px">
-             
-            </div>
-        
-        </div>
-
-
-
-
         <div class="starter-template">
-            <h1>View your models</h1>
+            <h1>Check out my models</h1>
             <p class="lead">
                 Upload your models and share it with your friends.
               
@@ -125,14 +106,64 @@
                 </div>
             </div>
 
+            <div id="file-uploading" class="collapse">
+                <%--<input type="file" id="upload-files" name="file">--%>
+                <div id="box">Drag & Drop files from your machine on this box.</div>
+                <div class="text-right">
+                    <button id="upload" type="button" class="btn btn-default btn-success">Upload</button>
 
-            <div class="row">
-                <div id="viewer3d" style="height: 600px"></div>
+                </div>
+
+                <div id="alert_placeholder" style="padding: 10px">
+                </div>
+
+
+                <%--                <!-- Thumbnail preview -->
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img data-src="holder.js/300x300" alt="...">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                    2%
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img data-src="holder.js/300x300" alt="...">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+                                    2%
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>--%>
             </div>
+
+            
+
+
+        </div>
+
+        <!-- Viewer container -->
+        <div class="row">
+            <div>
+                <div id="viewerContainer" class="text-center" style="height: 600px; width: 1170px; background-color: red">
+
+                    <%-- <h1>Loading...</h1>--%>
+                </div>
+            </div>
+
         </div>
 
     </div>
-    <!-- /.container -->
+
 
 
 
@@ -143,7 +174,8 @@
                 <div class="modal-header">
 
                     <button type="button" class="close" data-dismiss="modal"
-                        aria-hidden="true">×</button>
+                        aria-hidden="true">
+                        ×</button>
 
                     <h4 class="modal-title">Get embeded HTML</h4>
                 </div>
@@ -154,9 +186,9 @@
                         <div class="panel-body">
                             <div id="setting" class="control-group">
                                 <div class="controls">
-                                    Width:<input id="width" type="text" class="input-sm" value="800" />
+                                    Width:<input id="width" type="text" class="input-sm" value="800" />px
                                     Height:
-                              <input id="height" type="text" class="input-sm" value="500" /><br />
+                              <input id="height" type="text" class="input-sm" value="500" />px<br />
                                 </div>
                             </div>
                             <div id="share_code" class="control-group">
@@ -219,31 +251,41 @@
     <script src="Scripts/modernizr-2.5.3.js"></script>
 
 
-<%--    <link rel="stylesheet" href="https://viewing-staging.api.autodesk.com/viewingservice/v1/viewers/style.css" type="text/css" />
-    <script src="https://viewing-staging.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js"></script>--%>
+<%--    <link rel="stylesheet" href="https://developer-stg.api.autodesk.com/viewingservice/v1/viewers/style.css" type="text/css">
+    <script src="https://developer-stg.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js"></script>--%>
 
-<%--                <link rel="stylesheet" href="https://viewing.api.autodesk.com/viewingservice/v1/viewers/style.css" type="text/css"/>
-        <script src="https://viewing.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js"></script>--%>
+        <link rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.css" type="text/css">
+    <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js"></script>
 
-    <link rel="stylesheet" href="http://adskhack.azurewebsites.net/HackathonMaterials/Library/style.css" />
-    <script src="http://adskhack.azurewebsites.net/HackathonMaterials/Library/viewer3D.min.js"></script>
-    <script src="http://adskhack.azurewebsites.net/HackathonMaterials/Library/viewer3D.min.cp.js"></script>
+    <script src="Scripts/viewer.js"></script>
 
 
     <script type="text/javascript">
 
         $(document).ready(function () {
 
+            var g_urn = Autodesk.Viewing.Private.getParameterByName("urn");
+
+            //default model
+            if (!g_urn) {
+                g_urn = 'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6ZGFuaWVsX3RyYW5zbGF0ZV9idWNrZXQvRHJpbGwuZHdmeA==';
+            }
+
+            //init viewer and show the default model
+            initializeViewer('viewerContainer', g_urn);
+
+
 
             ////////////////////////////////////////////////
             //share to friends
+            ////////////////////////////////////////////////
             $('#getEmbededHtml').click(function () {
 
                 var height = $('#height').val();
                 var width = $('#width').val();
                 var shareUrl = getShareLink();
-                
-                var html = '<iframe src="' + shareUrl + '" style="height:' + height + '; width:' + width + '" />';
+
+                var html = '<iframe src="' + shareUrl + '" style="height:' + height + 'px; width:' + width + 'px;" />';
                 $('#share_code_box').val(html);
 
                 $('#share_code_box').focus();
@@ -251,6 +293,25 @@
 
                 $('#ShareModal').modal('show');
             });
+
+            $('#height').blur(function () {
+                var height = $('#height').val();
+                var width = $('#width').val();
+                var shareUrl = getShareLink();
+
+                var html = '<iframe src="' + shareUrl + '" style="height:' + height + 'px; width:' + width + 'px;" />';
+                $('#share_code_box').val(html);
+            });
+
+            $('#width').blur(function () {
+                var height = $('#height').val();
+                var width = $('#width').val();
+                var shareUrl = getShareLink();
+
+                var html = '<iframe src="' + shareUrl + '" style="height:' + height + 'px; width:' + width + 'px;" />';
+                $('#share_code_box').val(html);
+            });
+
 
             $('#getThisLink').click(function () {
                 var thisUrl = getShareLink();
@@ -260,62 +321,26 @@
             });
 
             function getShareLink() {
-                //var shareLink = window.location.href;
-                //if (shareLink.indexOf('urn=')) {
-                //    //TODO: replace with new urn
-                    
-                //}
-                //else {
-                //    //append urn param
-                //    if (shareLink.indexOf('?') > 0) {
-                //        shareLink += '&urn=' + g_urn;
-                //    }
-                //    else {
-                //        shareLink += '?urn=' + g_urn;
-                //    }
-                    
-                //}
-                // return shareLink;
-               
-                /*
-                 * queryParameters -> handles the query string parameters
-                 * queryString -> the query string without the fist '?' character
-                 * re -> the regular expression
-                 * m -> holds the string matching the regular expression
-                 */
-                var queryParameters = {}, queryString = location.search.substring(1),
-                    re = /([^&=]+)=([^&]*)/g, m;
-
-                // Creates a map with the query string parameters
-                while (m = re.exec(queryString)) {
-                    queryParameters[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+                var url = window.location.href;
+                //remove hash
+                var idx = url.indexOf('#');
+                if (idx > 0) {
+                    url = url.substring(0, idx);
                 }
 
-                // Add new parameters or update existing ones
-                queryParameters['urn'] = g_urn;
-               
-                /*
-                 * Replace the query portion of the URL.
-                 * jQuery.param() -> create a serialized representation of an array or
-                 *     object, suitable for use in a URL query string or Ajax request.
-                 */
-                var newSearch = $.param(queryParameters); 
-                if (!location.search) {
-                    return location.href + '?' + newSearch;
+                //add urn param
+                var idx = url.indexOf('?');
+                if (idx > 0) {
+                    url = url.substring(0, idx);
                 }
-                else {
-                    //Buggy, urn repeat
-                    //TODO : replace urn value
-                    return location.href + '&' + newSearch;
-                }
-                
+                return url + '?urn=' + g_urn;
 
-
-                
             }
 
             ///////////////////////////////////////////
             // File upload
+            ///////////////////////////////////////////
+            //TODO: enable traditional way to upload files
 
             if (!Modernizr.draganddrop) {
                 alert("This browser doesn't support File API and Drag & Drop features of HTML5!");
@@ -327,24 +352,21 @@
             box.addEventListener("dragover", OnDragOver, false);
             box.addEventListener("drop", OnDrop, false);
 
-            $("#upload").click(upload); //see below
-
-
-            function upload() {
+            $("#upload").click(function () {
 
                 //clappes the upload panel
                 //$('#file-uploading').collapse();
 
                 if (selectedFiles && selectedFiles.length > 0) {
 
+                    //show the waiting dialog
+                    var waitDiv = $('#pleaseWaitDialog');
+                    waitDiv.modal('show');
+
                     var data = new FormData();
                     for (var i = 0; i < selectedFiles.length; i++) {
                         data.append(selectedFiles[i].name, selectedFiles[i]);
                     }
-
-                    //show the waiting dialog
-                    var waitDiv = $('#pleaseWaitDialog');
-                    waitDiv.modal('show');
 
                     $.ajax({
                         type: "POST",
@@ -353,51 +375,58 @@
                         processData: false,
                         data: data,
                         success: function (result) {
-                            //alert(result);
-                            var json = JSON.parse(result);
 
                             //hide the waiting dialog
                             waitDiv.modal('hide');
 
+                            //alert(result);
+                            var json = JSON.parse(result);
                             if (json.urn) {
-                               
 
                                 createAutoClosingAlert("You model is upload successfully. Translation starting...");
 
-
-                                //alert(json.urn + 'translation started.');
                                 g_urn = json.urn;
 
-                                //start the viewer
-                                var token = '<%=Session["token"] == null ? "" : Session["token"].ToString()%>';
 
-                                //check translation progress
-                                checkProgress(g_urn, token);
+                                //start viewer
+                                clearCurrentModel();
+                                initializeViewer('viewerContainer', g_urn);
 
-
-                               
-                            }
+                            }//end if
                             else {
                                 createAutoClosingAlert_Error("Error happened when uploading/translation, please try again latter.");
-                            }
 
-                        },
-                        error: function () {
+                            }//else if
 
-                            //hide the waiting dialog
-                            waitDiv.modal('hide');
-
-                            createAutoClosingAlert_Error("There was error uploading files!");
                         }
+                    })
+                    .done(function () {
+
+                    })
+                    .fail(function () {
+                        //hide the waiting dialog
+                        waitDiv.modal('hide');
+
+                        createAutoClosingAlert_Error("There was error uploading files!");
 
                     });
-                }
-            }
+
+
+
+
+
+
+
+                }//end if
+
+            });
+
+
 
             function checkProgress(urn, token) {
 
                 var data = new FormData();
-                data.append('urn',urn);
+                data.append('urn', urn);
 
                 $.ajax({
                     type: "POST",
@@ -406,10 +435,10 @@
                     processData: false,
                     data: data,
                     success: function (percentage) {
-                        
+
 
                         //wait for success to view, actully you don't have to
-                        if (percentage!= '' && percentage === '100%') {
+                        if (percentage != '' && percentage === '100%') {
 
                             //window.clearInterval(checkProgress);
                             createAutoClosingAlert('Congratulations!! ' + percentage + " translation completed.");
@@ -428,7 +457,7 @@
                         //clearInterval(checkProgress);
                         createAutoClosingAlert_Error("error when checking progress");
                     }
-                       
+
                 });
 
                 //window.setInterval(checkProgress, 10000, urn, token);
@@ -436,26 +465,8 @@
             }
 
 
-            function loadModel(urn, token) {
 
-                var options = {};
-                // Environment controls service end points viewer uses.
-                //options.env = 'ApigeeStaging';
 
-                //omit the env for production ? 
-                options.env = 'ApigeeProd';
-                // Access token required for authentication and authorization.
-                // It is for now a 3 legged oauth 1 access token.
-                options.accessToken = token;
-
-                // the document to load in the viewer ...
-                var documentId = 'urn:' + urn;
-                // Load model.
-                var auth = initializeAuth(null, options);
-                loadDocument(g_viewer, auth, documentId);
-            }
-
-        
 
             function createAutoClosingAlert(message) {
                 $('#alert_placeholder').html('<div id="alertDiv" class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + message + '</div>');
@@ -500,77 +511,8 @@
             }
 
 
-            ///////////////////////////////////////////////////////////
-            // viewer 
-            var canvasId = 'viewer3d';
-            var g_viewer; 
-
-            var g_urn = getParameterByName("urn");
-            if (!g_urn) {
-                //default model
-                g_urn = 'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6ZGFuaWVsX3RyYW5zbGF0ZV9idWNrZXQvRHJpbGwuZHdmeA==';
-            }
-
-            var token = '<%=Session["token"] == null ? "" : Session["token"].ToString()%>';
-
-            var options = {};
-            // Environment controls service end points viewer uses.
-            //options.env = 'ApigeeStaging';
-            options.env = 'ApigeeProd';
-            
-            // Access token required for authentication and authorization.
-            // It is for now a 3 legged oauth 1 access token.
-            options.accessToken = token;
-
-            g_viewer = initializeViewer(canvasId, options);
 
 
-            // the document to load in the viewer ...
-            documentId = 'urn:' + g_urn;
-            // Load model.
-            var auth = initializeAuth(null, options);
-            loadDocument(g_viewer, auth, documentId);
-
-
-
-            function initializeViewer(canvasId, options) {
-
-                // Initialize env, service end points, and authentication.
-                initializeEnvironmentVariable(options);
-                initializeServiceEndPoints();
-                var auth = initializeAuth(null, options);
-
-                // Use 3D viewer.
-                var container = document.getElementById(canvasId);
-                var viewer = new Autodesk.Viewing.Private.GuiViewer3D(container, {});
-
-                viewer.initialize();
-
-                //export the viewer
-                return viewer;
-            }
-
-            function loadDocument(viewer, auth, documentId) {
-
-                var path = VIEWING_URL + '/bubbles/' + documentId.substr(4);
-
-                Autodesk.Viewing.Document.load(path, auth,
-                    function (document) {
-                        var svfItems = Autodesk.Viewing.Document.getSubItemsWithProperties(document.getRootItem(),
-                                { 'mime': 'application/autodesk-svf' }, true);
-                        if (svfItems.length > 0) {
-                            viewer.load(svfItems[0].urn);
-                        }
-                    }, onErrorLoadModel
-                );
-            }
-
-            function onErrorLoadModel(msg) {
-                var container = document.getElementById('viewer3d');
-                if (container) {
-                    AlertBox.displayError(container, "LOAD Error: " + msg);
-                }
-            }
 
         });
 
