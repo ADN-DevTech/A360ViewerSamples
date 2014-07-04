@@ -11,17 +11,21 @@
         function info(txt) { document.getElementById('info').innerHTML = txt; }
         function code(txt) {
             var passedTXT = txt;
-            var index = passedTXT.indexOf("\"key\" : \"")+"\"key\" : \"".length;
+			
+			var index = passedTXT.indexOf("\"key\" : \"")+"\"key\" : \"".length;
             var key = passedTXT.substring(index, passedTXT.indexOf("\"", index+1));
-            var urn = "urn:adsk.oss:file.fs:" + key;
-            var base64URN = window.btoa(urn);
+			
+            var index = passedTXT.indexOf("\"id\" : \"")+"\"id\" : \"".length;
+            var urn = passedTXT.substring(index, passedTXT.indexOf("\"", index+1));
+	
+			var base64URN = window.btoa(urn);
 
             // trigger bubble POST
             var invocation = new XMLHttpRequest();
             function handler() {
               // noop
             }
-            invocation.open('POST', 'https://developer.api.autodesk.com/viewingservice/v1/bubbles', false); // do a sync call
+            invocation.open('POST', 'https://developer.api.autodesk.com/viewingservice/v1/register', false); // do a sync call
             invocation.setRequestHeader('Content-Type', 'application/json');
             invocation.onreadystatechange = handler;  // see above
             invocation.withCredentials = true;
@@ -178,6 +182,33 @@
           return xhr;
         }
 
+		function CreateBucket(bucketKey,invocation){
+		
+		
+				function handler() {
+				  if (invocation.readyState == 4) { //4 = 'loaded'
+					var payload = invocation.responseText; // TODO no-op
+					if (invocation.status==200){
+						//created successfully
+					}else if(invocation.status==409) {  
+						//alert('conflict')
+						//conflict, existed
+					}
+					else {
+						alert('error when creating bucket');
+					}
+					 
+				  }
+				}
+			invocation.open('POST', 'https://developer.api.autodesk.com/oss/v1/buckets', false); // do a sync call
+			invocation.setRequestHeader('Content-Type', 'application/json');
+			invocation.onreadystatechange = handler;  // see above
+			invocation.withCredentials = true;
+			var toSend =  "{\"bucketKey\":\"" + bucketKey + "\",\"servicesAllowed\":{},\"policy\":\"transient\"}";
+			invocation.send(toSend);
+			
+		}
+		
         // Make the actual CORS request.
         function uploadFile(evt) {
             var files = document.getElementById('files').files;
@@ -189,7 +220,7 @@
 
             var invocation = new XMLHttpRequest();
             function handler() {
-              if (invocation.readyState == 4) {
+              if (invocation.readyState == 4) { //4 = 'loaded'
                  var payload = invocation.responseText; // TODO no-op
               }
             }
@@ -198,18 +229,21 @@
             invocation.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             invocation.onreadystatechange = handler;  // see above
             invocation.withCredentials = true;
-            invocation.send("access-token=" + token);   // expected to set the cookie upon server response
-
+            invocation.send("access-token=" + token);   // expected to set the cookie upon server response			
+		
+			 //random bucket to avoid confliction
+			 // NOTE: do not need to create a bucket every time, it's recommended to use one bucket 
+			var uploadBucket = "translation_daniel" + Math.ceil(Math.random() * 99);
 			
-			//Assume the bucket 'translation' exist,
 			//if it does not exist, you need to create one,
-			//please refer to http://developer.api.autodesk.com/documentation/v1/oss.html#oss-bucket-and-object-api-v1-0 
+			//please refer to http://developer.api.autodesk.com/documentation/v1/oss.html#oss-bucket-and-object-api-v1-0
+			CreateBucket(uploadBucket,invocation);
 			
 			
 			
             // create CORS request
             var method = 'PUT';
-            var uploadBucket = "translation";
+            
             var uploadServerUrl = "https://developer.api.autodesk.com";
             var url = uploadServerUrl + '/oss/v1/buckets/' + uploadBucket + '/objects/' + escape(f.name);
             var headers = {

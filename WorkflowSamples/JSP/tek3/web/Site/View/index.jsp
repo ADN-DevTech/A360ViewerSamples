@@ -20,7 +20,7 @@
       }
     }
     var token = '<%=token%>'; // set from the server side on first time invocation.
-  	invocation.open('POST', 'https://developer.api.autodesk.com/viewingservice/v1/settoken', false); // do a sync call
+  	invocation.open('POST', 'https://developer.api.autodesk.com/utility/v1/settoken', false); // do a sync call
   	invocation.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   	invocation.onreadystatechange = handler;  // see above
   	invocation.withCredentials = true;
@@ -32,12 +32,9 @@
 
 
 
+	<link rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.css" type="text/css">
+    <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js"></script>
 
-	<link rel="stylesheet" href="https://viewing.api.autodesk.com/viewingservice/v1/viewers/style.css" type="text/css"/>
-	<script src="https://viewing.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js"></script>
-
-
-      <script src="jquery-2.0.3.min.js"></script>
 
       <script>
 
@@ -45,46 +42,58 @@
           function initialize() {
 
   			var options = {};
-              // Environment controls service end points viewer uses.
-              // Development, Staging, and Production are valid values.
-              options.env = "ApigeeProd";
-  			options.accessToken = getParameterByName("accessToken") ? getParameterByName("accessToken") : token;
-              initializeEnvironmentVariable(options);
-              initializeServiceEndPoints();
-              auth = initializeAuth(token);
-  			// dwf sample
-              //loadDocument('viewer1', 'urn:dXJuOmFkc2suczM6ZGVyaXZlZC5maWxlOlZpZXdpbmdTZXJ2aWNlVGVzdEFwcC91c2Vycy9EYXZpZF9XYXR0L0Jsb3dlci5kd2Y', Autodesk.GuiViewer3D, {'type':'geometry', 'role':'3d'}, auth);
+        
+			options.accessToken = Autodesk.Viewing.Private.getParameterByName("accessToken") ? Autodesk.Viewing.Private.getParameterByName(		"accessToken") : token;
+			options.document = 'urn:<%=urn%>';
 
-  			// from OSS
-            // loadDocument('viewer1', 'urn:dXJuOmFkc2sub3NzOmZpbGUuZnM6c2FtcGxlcy9ibG93ZXIuZHdm', Autodesk.GuiViewer3D, {'type':'geometry', 'role':'3d'}, auth);
-              loadDocument('viewer1', 'urn:<%=urn%>', Autodesk.GuiViewer3D, {'type':'geometry', 'role':'3d'}, auth);
+			var viewerContainer = document.getElementById('viewer1');
+			var viewer = new Autodesk.Viewing.Private.GuiViewer3D(viewerContainer, {});
+			
+			Autodesk.Viewing.Initializer(options, function () {
+				viewer.initialize();
+				//loadDocument(viewer, getAuthObject(), options.document);
+				//when the changes are pushed to prod
+				loadDocument(viewer, Autodesk.Viewing.Private.getAuthObject(), options.document);
+			});
+
+		
+           
           }
+		  
+		  
+		function loadDocument(viewer, auth, documentId) {
 
-          function loadDocument(containerId, documentId, viewerClass, geometryFilter, auth) {
-              // Create and initialize the given viewer in the given container.
-              //
-              var viewerContainer = document.getElementById(containerId);
-              var viewer = new viewerClass(viewerContainer, {});
-              viewer.initialize();
+			//var path = VIEWING_URL + '/bubbles/' + documentId.substr(4);
+			var path = VIEWING_URL + '/' + documentId.substr(4);
+			//var path = documentId;
 
-              // Load the given document.  When loaded, find the requested geometry type
-              // and load its viewable into the viewer.
-              //
-              Autodesk.Document.load(documentId, auth,
-                  function(document) { // onLoadCallback
-                      var rootItem = document.getRootItem();
-                      var geometryItems = Autodesk.Document.getSubItemsWithProperties(rootItem, geometryFilter, true);
+			// Find the first 3d geometry and load that.
+			Autodesk.Viewing.Document.load(path, auth,
+				function (doc) {// onLoadCallback
 
-                      // Load the first geometry.
-                      //
-                      viewer.load(document.getViewablePath(geometryItems[0]));
-                  },
-                  function(msg) { // onErrorCallback
-                  }
-              );
+					var geometryItems = [];
+					geometryItems = Autodesk.Viewing.Document.getSubItemsWithProperties(doc.getRootItem(), {
+						'type': 'geometry',
+						'role': '3d'
+					}, true);
 
-              return viewer;
-          }
+				if (geometryItems.length > 0) {
+					viewer.load(doc.getViewablePath(geometryItems[0]),
+						null,           //sharedPropertyDbPath
+						function () {   //onSuccessCallback
+							//alert('viewable are loaded successfully');
+						},
+						function () {   //onErrorCallback
+							//alert('viewable loading failded');
+						}
+					);
+				}
+			}, function (errorMsg) {// onErrorCallback
+				alert("Load Error: " + errorMsg);
+			});
+		}
+
+          
       </script>
     <%}
 %>
@@ -107,7 +116,7 @@
             while (it.hasNext()) {
                 Map.Entry pairs = (Map.Entry)it.next();
         %>
-        <A HREF="/tek3/web/Site/View/?urn=<%=pairs.getValue()%>">
+        <A HREF="/tek3/web/Site/View/?urn=<%=pairs.getValue()%>&accessToken=<%=token%>">
         <IMG SRC="https://developer.api.autodesk.com/viewingservice/v1/thumbnails/<%=pairs.getValue()%>"></A>
         <!--https://developer.api.autodesk.com/viewingservice/v1/items/urn:adsk.viewing:fs.file:dXJuOmFkc2suczM6ZGVyaXZlZC5maWxlOnRyYW5zbGF0aW9uXzI1X3Rlc3RpbmcvRFdGL01NMzUwMEFzc2VtYmx5LmR3Zg==/output/1/image15.png-->
         <%=pairs.getKey()%><BR>
