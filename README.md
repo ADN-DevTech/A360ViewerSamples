@@ -1,3 +1,10 @@
+##Caution!
+
+This repository will not be maintained and will be retired/deleted soon. Please refer to https://github.com/developer-autodesk for the lastest samples of Autodesk View and Data API
+
+
+
+
 
 Copyright (c) Autodesk, Inc. All rights reserved
 
