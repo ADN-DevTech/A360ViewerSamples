@@ -6,6 +6,11 @@ This repository will not be maintained and will be retired/deleted soon. Please 
 
 
 
+
+
+Autodesk 360 viewer Samples
+======================
+
 Copyright (c) Autodesk, Inc. All rights reserved
 
 Autodesk 360 viewer API samples Autodesk Developer Network (ADN)
@@ -14,8 +19,8 @@ Permission to use, copy, modify, and distribute this software in object code for
 
 AUTODESK PROVIDES THIS PROGRAM "AS IS" AND WITH ALL FAULTS. AUTODESK SPECIFICALLY DISCLAIMS ANY IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. AUTODESK, INC. DOES NOT WARRANT THAT THE OPERATION OF THE PROGRAM WILL BE UNINTERRUPTED OR ERROR FREE.
 
-Autodesk 360 viewer Samples
-======================
+
+
 A set of samples demonstrating how to use the Autodesk 360 viewing service APIs
 
 
